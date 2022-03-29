@@ -49,7 +49,7 @@ export default class AlumnosControllers {
     }
 
     async getAlumns(req, res) {
-        const alumns = await Alumno.find();
+        const alumns = await Alumno.find().lean();
 
         const listAlumns = [...alumns];
 
